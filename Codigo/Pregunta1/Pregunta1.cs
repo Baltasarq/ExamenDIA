@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace ExamenDIA.Pregunta1 {
+﻿namespace Codigo.Pregunta1 {
 	public static class Pregunta1 {
 		public const string Explicacion = @"
 			Esta es la plantilla para cualquier examen de DIA.

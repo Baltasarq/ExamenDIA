@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExamenDIA", "ExamenDIA.csproj", "{2D81990B-2B9C-4361-BAF0-2FC1B2035626}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codigo", "Codigo/Codigo.csproj", "{2D81990B-2B9C-4361-BAF0-2FC1B2035626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests.csproj", "{5EAC47D2-8A7C-452D-9E04-AF730BC42F79}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests/Tests.csproj", "{5EAC47D2-8A7C-452D-9E04-AF730BC42F79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

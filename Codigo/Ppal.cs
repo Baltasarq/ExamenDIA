@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ExamenDIA {
+namespace Codigo {
 	class Ppal {
 		public static void Main()
 		{
