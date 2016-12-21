@@ -2,9 +2,14 @@
 
 namespace Codigo {
 	class Ppal {
-		public static void Main()
+		static void Main()
 		{
-			Console.WriteLine( Pregunta1.Pregunta1.Explicacion );
+			Pregunta1.Ppal.Prueba();
+			Pregunta2.Ppal.Prueba();
+			Pregunta3.Ppal.Prueba();
+			Pregunta4.Ppal.Prueba();
+			Pregunta5.Ppal.Prueba();
+			Pregunta6.Ppal.Prueba();
 		}
 	}
 }

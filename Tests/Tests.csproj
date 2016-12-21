@@ -31,6 +31,7 @@
     <Reference Include="System" />
     <Reference Include="nunit.framework">
       <HintPath>packages\NUnit.3.5.0\lib\net45\nunit.framework.dll</HintPath>
+      <Package>nunit</Package>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -42,9 +43,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ExamenDIA.csproj">
+    <ProjectReference Include="..\Codigo\Codigo.csproj">
       <Project>{2D81990B-2B9C-4361-BAF0-2FC1B2035626}</Project>
-      <Name>ExamenDIA</Name>
+      <Name>Codigo</Name>
     </ProjectReference>
   </ItemGroup>
 </Project>

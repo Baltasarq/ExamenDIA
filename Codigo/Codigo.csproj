@@ -36,6 +36,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ppal.cs" />
     <Compile Include="Pregunta1\Pregunta1.cs" />
+    <Compile Include="Pregunta1\Ppal.cs" />
+    <Compile Include="Pregunta2\Ppal.cs" />
+    <Compile Include="Pregunta3\Ppal.cs" />
+    <Compile Include="Pregunta4\Ppal.cs" />
+    <Compile Include="Pregunta5\Ppal.cs" />
+    <Compile Include="Pregunta6\Ppal.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
