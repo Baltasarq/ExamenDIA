@@ -14,6 +14,9 @@
 
 		Recuerda eliminar: 'Pregunta1.Ppal.Prueba();'
 		en Codigo.Ppal.Main().
+
+		Haz modificaciones globales (tracers, etc.)
+		en Codigo.Ppal.
 	
 		Buena suerte,
 		-- Baltasar García, jbgarcia@uvigo.es
