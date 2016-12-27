@@ -1,9 +1,13 @@
-﻿using System;
+﻿namespace Codigo {
+	using System;
 
-namespace Codigo {
 	class Ppal {
 		static void Main()
 		{
+			Console.WriteLine( "Nombre: " + Info.Nombre );
+			Console.WriteLine( "DNI: {0}{1}", Info.Dni, Info.LetraDni );
+			Console.WriteLine( "===" );
+
 			Pregunta1.Ppal.Prueba();
 			Pregunta2.Ppal.Prueba();
 			Pregunta3.Ppal.Prueba();
