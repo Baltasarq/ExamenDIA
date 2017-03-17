@@ -1,6 +1,6 @@
-﻿using System;
+﻿namespace Codigo.Pregunta4 {
+    using System;
 
-namespace Codigo.Pregunta1 {
 	public static class Ppal {
 		public static void Prueba()
 		{
@@ -8,7 +8,8 @@ namespace Codigo.Pregunta1 {
 
 			Console.WriteLine( "\n\n" + NamespaceName.Substring( NamespaceName.LastIndexOf( '.' ) + 1 ) );
 			Console.WriteLine( "=========" );
-			Console.WriteLine( Pregunta1.Explicacion );
+
+			Console.WriteLine( "Prueba que tu respuesta funciona." );
 		}
 	}
 }

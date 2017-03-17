@@ -1,6 +1,6 @@
-﻿using System;
+﻿namespace Codigo.Pregunta5 {
+    using System;
 
-namespace Codigo.Pregunta4 {
 	public static class Ppal {
 		public static void Prueba()
 		{

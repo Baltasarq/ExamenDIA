@@ -14,6 +14,14 @@
 			Pregunta4.Ppal.Prueba();
 			Pregunta5.Ppal.Prueba();
 			Pregunta6.Ppal.Prueba();
+            
+            if ( string.IsNullOrEmpty( Info.Nombre )
+              || Info.Dni < 0 )
+            {
+                Console.WriteLine( "\n** Recuerda escribir tus datos en Info.cs **" );
+            }
+            
+            Console.WriteLine( "\n" );
 		}
 	}
 }

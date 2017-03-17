@@ -1,6 +1,7 @@
-﻿using System;
-
+﻿
 namespace Tests {
+    using System;
+    
 	public class TestPpal {
 	}
 }
