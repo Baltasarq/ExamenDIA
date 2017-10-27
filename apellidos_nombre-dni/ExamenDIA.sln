@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Codigo", "Codigo/Codigo.csproj", "{2D81990B-2B9C-4361-BAF0-2FC1B2035626}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests/Tests.csproj", "{5EAC47D2-8A7C-452D-9E04-AF730BC42F79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D81990B-2B9C-4361-BAF0-2FC1B2035626}.Debug|x86.ActiveCfg = Debug|x86
+		{2D81990B-2B9C-4361-BAF0-2FC1B2035626}.Debug|x86.Build.0 = Debug|x86
+		{2D81990B-2B9C-4361-BAF0-2FC1B2035626}.Release|x86.ActiveCfg = Release|x86
+		{2D81990B-2B9C-4361-BAF0-2FC1B2035626}.Release|x86.Build.0 = Release|x86
+		{5EAC47D2-8A7C-452D-9E04-AF730BC42F79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5EAC47D2-8A7C-452D-9E04-AF730BC42F79}.Debug|x86.Build.0 = Debug|Any CPU
+		{5EAC47D2-8A7C-452D-9E04-AF730BC42F79}.Release|x86.ActiveCfg = Release|Any CPU
+		{5EAC47D2-8A7C-452D-9E04-AF730BC42F79}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$1.ResourceNamePolicy = FileFormatDefault
+		$0.VersionControlPolicy = $2
+		$2.inheritsSet = Mono
+	EndGlobalSection
+EndGlobal
