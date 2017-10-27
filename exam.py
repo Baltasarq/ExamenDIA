@@ -15,7 +15,7 @@ import subprocess
 
 AppInfo = {
     "name": "exam",
-    "version": "v0.1 20171022"
+    "version": "v0.2 20171022"
 }
 
 ExcludedFilesByExtension = [ ".exe", ".dll", ".obj", ".pdb", ".userprefs" ]
@@ -26,7 +26,8 @@ Executable = "Codigo/bin/Debug/Codigo.exe"
 DataFile = "exam_data.json"
 ZipFileNamePrefix = "zipped_exam_"
 SolutionFileName = "ExamenDIA.sln"
-InfoClassFile = os.path.join(ExamFolder, os.path.join("Codigo", "Info.cs"))
+InfoClassFolder = os.path.join(ExamFolder, "Codigo")
+InfoClassFile = os.path.join(InfoClassFolder, "Info.cs")
 
 
 def set_input_function():
@@ -72,23 +73,23 @@ class UserData:
         self._surname = self._surname.strip()
         self._dni = str(int(dni)) + dni_letter
         self._email = email
-    
+
     @property
     def name(self):
         return self._name
-    
+
     @property
     def surname(self):
         return self._surname
-    
+
     @property
     def email(self):
         return self._email
-    
+
     @property
     def dni(self):
         return int(self._dni[:-1])
-    
+
     @property
     def dni_letter(self):
         return self._dni[-1]
@@ -141,39 +142,55 @@ class UserData:
         return self.full_name() + "(" + self.full_dni()+ "): " + self.email
 
 
-def ask_user_data():
-    toret = UserData.default()
+def ask_for(msg, default_value, only_digits=False, max_length=128):
+    toret = ""
+    correct = False
+
+    while not correct:
+        toret = input(msg + "[" + str(default_value) + "]: ").strip()
+
+        if not toret:
+            toret = default_value
+
+        correct = True if len(toret) > 0 else False
+        correct = True if toret.isdigit() else correct
+        correct = False if len(toret) > max_length else correct
+
+    return toret
+
+
+def ask_user_data(user_data):
     correct = False
 
     while not correct:
         print()
 
-        # Dni
-        dni = "a"
-        while not dni.isdigit():
-            dni = input("Dame tu DNI (solo digitos): ").strip()
-
-        # Letra DNI
-        dni_letter = "DD"
-        while len(dni_letter) != 1:
-            dni_letter = input("Dame la letra de tu DNI: ").strip().upper()
-
-        name = input("Dame tu nombre propio: ").strip()
-        surname = input("Dame tus apellidos: ").strip()
-        email = input("Dame tu email: ").strip()
+        dni = ask_for("Dame tu DNI (solo digitos): ",
+                      str(user_data.dni),
+                      only_digits=True,
+                      max_length=10)
+        dni_letter = ask_for("Dame la letra de tu DNI: ",
+                             user_data.dni_letter,
+                             only_digits=False,
+                             max_length=1).upper()
+        name = ask_for("Dame tu nombre propio: ", user_data.name)
+        surname = ask_for("Dame tus apellidos: ", user_data.surname)
+        email = ask_for("Dame tu email: ", user_data.email)
 
         try:
-            toret = UserData(surname, name, dni, dni_letter, email)
-            print(toret)
+            user_data = UserData(surname, name, dni, dni_letter, email)
+            print(user_data)
 
-            str_correct = input("Es correcto (S/n): ").strip()
-            correct = (len(str_correct) == 0
-                        or str_correct[0].upper() == 'S')
+            str_correct = ask_for("Es correcto (s/n): ",
+                                  "S",
+                                  only_digits=False,
+                                  max_length=1).upper()
+            correct = (str_correct[0] == 'S')
         except Exception as e:
             print("Error collecting user data: " + e.args[0])
             correct = False
 
-    return toret
+    return user_data
 
 
 def build_status(status, msg):
@@ -183,7 +200,7 @@ def build_status(status, msg):
         toret += "OKAY] ... "
     else:
         toret += "FAIL] ... "
-        
+
     return toret + msg
 
 
@@ -192,23 +209,23 @@ def locate_builder():
         :return: The name of builder executable, as a string, or None.
     """
     toret = "xbuild"
-    retcode = subprocess.run(
+    retcode = subprocess.call(
                     toret + " /h",
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL,
-                    check=False, shell=True).returncode
-                
+                    shell=True)
+
     print(build_status(retcode == 0, "Trying to locate: " + toret))
-                
+
     if retcode != 0:
         toret = "msbuild"
-        retcode = subprocess.run(
+        retcode = subprocess.call(
                     toret + " /h",
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL,
-                    check=False, shell=True).returncode
+                    shell=True)
         print(build_status(retcode == 0, "Trying to locate: " + toret))
-        
+
     if retcode != 0:
         print(build_status(False, "No builder found."))
         toret = None
@@ -219,13 +236,13 @@ def is_mono_present():
     """Determines whether the mono vm is available.
         :return: The name of builder executable, as a string, or an empty string.
     """
-    retcode = subprocess.run(
+    retcode = subprocess.call(
                     "mono --help",
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL,
-                    check=False, shell=True).returncode
-    
-    toret = (retcode == 0)   
+                    shell=True)
+
+    toret = (retcode == 0)
     print(build_status(toret, "Trying to locate: mono"))
     return toret
 
@@ -237,23 +254,20 @@ def run(user_data):
     # If mono is not present, will try to execute the program directly
     if is_mono_present():
         cmd = "mono " + cmd
-        
+
     print()
-    retcode = subprocess.run(
-                    cmd,
-                    check=False, shell=True).returncode
-    
+    retcode = subprocess.call(cmd, shell=True)
+
     print(build_status(retcode == 0, "Executing: " + cmd))
-    
-    
+
+
 def build(user_data):
     builder = locate_builder()
     solution_file_path = os.path.join(user_data.folder_name, SolutionFileName)
-    
+
     if builder:
         print("Building: " + solution_file_path + "...")
-        retcode = subprocess.run(builder + " " + solution_file_path,
-                       check=False, shell=True).returncode
+        retcode = subprocess.call(builder + " " + solution_file_path, shell=True)
         print(build_status(retcode == 0, "Building."))
 
 
@@ -279,14 +293,14 @@ def prep(user_data):
 
     # Locate important files
     exam_folder_located = os.path.isdir(ExamFolder)
-    infoclass_file_located = os.path.isfile(InfoClassFile)
+    infoclass_folder_located = os.path.isdir(InfoClassFolder)
 
     # Report the user
     print(build_status(exam_folder_located, "Locating the exam directory"))
-    print(build_status(infoclass_file_located, "Locating Info.cs"))
+    print(build_status(infoclass_folder_located, "Locating folder for Info.cs"))
 
-    if infoclass_file_located:
-        user_data = ask_user_data()
+    if infoclass_folder_located:
+        user_data = ask_user_data(user_data)
         with open(InfoClassFile, "wt") as f:
             f.write("namespace Codigo {\n    public static class Info {\n    "
                 + "    public const string Nombre = \""
@@ -308,9 +322,10 @@ def prep(user_data):
 
         print(build_status(renamed, "Directory renamed to: "
                                     + user_data.folder_name))
-    
-    if infoclass_file_located:
+
+    if infoclass_folder_located:
         user_data.to_json(DataFile)
+        print(build_status(True, "User data stored"))
 
     return
 
