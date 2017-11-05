@@ -19,6 +19,12 @@
 			Pregunta6.Ppal.Prueba();
 
             Console.WriteLine( "\n" );
+            
+            if ( Info.Dni == Info.InvalidData ) {
+                Console.WriteLine( "** Recuerda guardar tus datos en: '"
+                                    + Info.InfoFile
+                                    +"' **\n" );
+            }
 		}
 	}
 }

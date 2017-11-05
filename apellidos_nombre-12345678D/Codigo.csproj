@@ -54,7 +54,7 @@
     <Folder Include="Pregunta6\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="usr_exam_data.txt">
+    <None Include="usr_exam_data.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

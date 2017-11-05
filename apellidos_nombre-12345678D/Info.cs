@@ -2,6 +2,9 @@
     using System.IO;
 
 	public static class Info {
+        public const string InvalidData = "n/a";
+        public const string InfoFile = "usr_exam_data.txt";
+    
 		public static string Nombre {
             get {
                 if ( string.IsNullOrEmpty( apellidos ) ) {
@@ -34,11 +37,18 @@
 
         private static void Retrieve()
         {
-            using (var f = new StreamReader( "usr_exam_data.txt" )) {
-                dni = f.ReadLine();
-                nombre = f.ReadLine();
-                apellidos = f.ReadLine();
-                email = f.ReadLine();
+            try {
+	            using (var f = new StreamReader( InfoFile )) {
+	                dni = f.ReadLine();
+	                nombre = f.ReadLine();
+	                apellidos = f.ReadLine();
+	                email = f.ReadLine();
+	            }
+            } catch(IOException) {
+                dni = InvalidData;
+                nombre = InvalidData;
+                apellidos = InvalidData;
+                email = InvalidData;
             }
             
             return;
