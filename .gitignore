@@ -38,3 +38,8 @@ Thumbs.db
 
 #dotCover
 *.dotCover
+
+#Own files
+notas.txt
+usr_exam_data.*
+zip_exam-*
