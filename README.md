@@ -23,10 +23,12 @@ Recuerda, en primer lugar, modificar el nombre del directorio, siguiendo el form
     palotes_gomez_perico-11222333R
 
 Además, debes escribir tus datos personales en el archivo *usr_exam_data.txt*, con el formato:
-11222333R
-Perico
-Palotes
-perico@palotes.com
+<pre>
+    11222333R
+    Perico Gómez
+    Palotes
+    perico@palotes.com
+</pre>
 
 La plantilla tiene formato de proyecto para Xamarin Studio/Visual Studio/MonoDevelop.
 
