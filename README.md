@@ -24,10 +24,10 @@ Recuerda, en primer lugar, modificar el nombre del directorio, siguiendo el form
 
 Además, debes escribir tus datos personales en el archivo *usr_exam_data.txt*, con el formato:
 <pre>
-    11222333R
-    Perico Gómez
-    Palotes
-    perico@palotes.com
+11222333R
+Perico Gómez
+Palotes
+perico@palotes.com
 </pre>
 
 La plantilla tiene formato de proyecto para Xamarin Studio/Visual Studio/MonoDevelop.
