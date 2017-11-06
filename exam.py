@@ -1,7 +1,7 @@
 #! /bin/env python3
 # encoding: utf-8
 
-# exam - Exam baker
+# exam - Exam baker (c) jbgarcia@uvigo.es 2017
 
 
 from __future__ import print_function
@@ -83,10 +83,10 @@ class UserData:
         if len(dni_letter) != 1:
             raise Exception("la letra del DNI debe ser de longitud exacta 1")
 
-        self._name = name[0].upper() + name[1:]
+        parts = name.split()
+        self._name = " ".join([w[0].upper() + w[1:] for w in parts]).strip()
         parts = surname.split()
-        self._surname = " ".join([w[0].upper() + w[1:] for w in parts])
-        self._surname = self._surname.strip()
+        self._surname = " ".join([w[0].upper() + w[1:] for w in parts]).strip()
         self._dni = dni_prefix + str(int(dni)) + dni_letter
         self._email = email
 
