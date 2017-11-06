@@ -23,7 +23,7 @@ ExcludedFilesByExtension = [
     ".ini", ".db",                                          # Windows
     ".DS_Store",                                            # Mac
     ".bak", ".old",                                         # Backup
-    ".dex", ".apk", ".ap_", ".kt~", ".kts~", "ktm~",        # Android
+    ".dex", ".apk", ".ap_", ".kt~", ".kts~", ".ktm~",       # Android
     ".com", ".so", ".lib", ".tmp", ".obj", ".out",
     ".o", ".a", ".lai", ".la", ".dylib", ".dll", ".asm~",   # Assembler
     ".exe", ".pdb", ".userprefs",
@@ -31,9 +31,9 @@ ExcludedFilesByExtension = [
     ".pch", ".slo", ".lo", ".c~", ".cpp~",                  # C/C++
     ".mod", ".smod",                                        # Fortran
     ".jar", ".class", ".war", ".ear", ".ctxt", ".java~",    # Java
-    "ts~", ".js~", ".html~", ".css~",                       # JavaScript
-    ".bpi", ".bpl", ".map", ".dres", ".ocx", "pas~",        # Pascal (Delphi)
-    ".pyc", "pyw", ".cache", ".env", ".py~"                 # Python
+    ".ts~", ".js~", ".html~", ".css~",                      # JavaScript
+    ".bpi", ".bpl", ".map", ".dres", ".ocx", ".pas~",       # Pascal (Delphi)
+    ".pyc", ".pyw", ".cache", ".env", ".py~"                # Python
 ]
 
 
@@ -445,4 +445,4 @@ if __name__ == "__main__":
         cmd = parse_options(sys.argv, user_data)
         cmd()
     else:
-        print("\nCRITICAL: Needs Python 3.\n")
+        print("\nERROR CRITICO: Necesita Python 3.\n")
