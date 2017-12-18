@@ -1,7 +1,7 @@
 #! /bin/env python3
 # encoding: utf-8
 
-# exam - Exam baker (c) jbgarcia@uvigo.es 2017
+# exam - Exam baker (c) Baltasar 2017 MIT license <jbgarcia@uvigo.es>
 
 
 from __future__ import print_function
@@ -54,7 +54,7 @@ def remove_accents(input_str):
     nkfd_form = unicodedata.normalize('NFKD',
                                       input_str.encode("utf-8", "ignore")
                                       .decode("ascii", "ignore"))
-    return u"".join([c for c in nkfd_form if not unicodedata.combining(c)])
+    return "".join([c for c in nkfd_form if not unicodedata.combining(c)])
 
 
 class UserData:
