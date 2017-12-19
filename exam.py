@@ -209,7 +209,7 @@ def ask_user_data(user_data):
     while not correct:
         print()
 
-        dni_prefix = ask_for("Dame la letra prefijo de tu DNI: ",
+        dni_prefix = ask_for("Dame la letra prefijo de tu DNI (extranjeros): ",
                       user_data.dni_prefix,
                       min_length=-1,
                       max_length=1).upper()

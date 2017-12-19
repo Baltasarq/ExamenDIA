@@ -33,7 +33,6 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Ppal.cs" />
     <Compile Include="Pregunta1\Pregunta1.cs" />
     <Compile Include="Pregunta1\Ppal.cs" />
@@ -54,7 +53,7 @@
     <Folder Include="Pregunta6\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="usr_exam_data.json">
+    <None Include="usr_exam_data.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

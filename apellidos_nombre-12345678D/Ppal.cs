@@ -2,8 +2,6 @@
 	using System;
 
 	class Ppal {
-        public const string NotesFileName = "notas.txt";
-    
 		static void Main()
 		{
 			Console.WriteLine( "Nombre: " + Info.Nombre );
