@@ -42,4 +42,8 @@ Thumbs.db
 #Own files
 notas.txt
 usr_exam_data.*
-zip_exam-*
+*.zip
+
+#IDE files
+workspace.xml
+
