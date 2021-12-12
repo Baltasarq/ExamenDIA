@@ -5,30 +5,10 @@
     <projectFile>Tests/Tests.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af69f427-6d39-4c33-bd84-8bf1b660436d" name="Changes" comment="- Ported to dotnet 6.0&#10;- Removed python dependency.">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CodigoExamen/PersisteInfoEstudiante.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Codigo.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/ExamenDIA.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Info.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Ppal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Pregunta1/Ppal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Pregunta1/Pregunta1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Pregunta2/Ppal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Pregunta3/Ppal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Pregunta4/Ppal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Pregunta5/Ppal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Pregunta6/Ppal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Tests/TestPpal.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Tests/Tests.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apellidos_nombre-12345678D/Tests/packages.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/exam.py" beforeDir="false" />
+    <list default="true" id="af69f427-6d39-4c33-bd84-8bf1b660436d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodigoExamen/InfoEstudiante.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodigoExamen/InfoEstudiante.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodigoExamen/Ppal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodigoExamen/Ppal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +97,8 @@
       <workItem from="1639129025243" duration="1230000" />
       <workItem from="1639130966226" duration="6670000" />
       <workItem from="1639313303066" duration="490000" />
-      <workItem from="1639313797911" duration="2636000" />
+      <workItem from="1639313797911" duration="2775000" />
+      <workItem from="1639316802481" duration="885000" />
     </task>
     <task id="LOCAL-00001" summary="- Ported to dotnet 6.0&#10;- Removed python dependency.">
       <created>1639316422046</created>
@@ -126,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639316422046</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- Removed Python dependency">
+      <created>1639316522903</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639316522903</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +139,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="- Ported to dotnet 6.0&#10;- Removed python dependency." />
-    <option name="LAST_COMMIT_MESSAGE" value="- Ported to dotnet 6.0&#10;- Removed python dependency." />
+    <MESSAGE value="- Removed Python dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="- Removed Python dependency" />
   </component>
 </project>

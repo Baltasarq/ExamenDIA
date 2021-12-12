@@ -12,11 +12,16 @@ namespace CodigoExamen {
 	class Ppal {
 		static void ZipIt(string desktopPath, InfoEstudiante info)
 		{
-			string nf = "examen-" + info.GetStrId();
+			string filePath = Path.Combine( desktopPath, "examen-" + info.GetStrId() );
 				
+			// Eliminar el archivo si existe
+			if ( File.Exists( filePath ) ) {
+				File.Delete( filePath );
+			}
+			
 			ZipFile.CreateFromDirectory(
 				sourceDirectoryName: ".",
-				destinationArchiveFileName: Path.Combine( desktopPath, nf ),
+				destinationArchiveFileName: filePath,
 				compressionLevel: CompressionLevel.Fastest,
 				includeBaseDirectory: true,
 				entryNameEncoding: Encoding.UTF8 );
