@@ -37,7 +37,11 @@ namespace CodigoExamen {
 
         public string GetStrId()
         {
-            string toret = $"{this.Apellidos}_{this.NombrePropio}-{this.Dni}";
+            string apellidos = this.Apellidos
+                .Replace( "_", "" )
+                .Replace( "-", "" );
+            
+            string toret = $"{apellidos}_{this.NombrePropio}-{this.Dni}";
             
             // Convierte a ASCII
             toret = string.Join( "", toret.ToCharArray().Where( x => x < 127 ) );
@@ -55,10 +59,8 @@ namespace CodigoExamen {
                 .Replace( ":", "" )
                 .Replace( "^", "" )
                 .Replace( ".", "" )
-                .Replace( ",", "" )
-                .Replace( "_", "" )
-                .Replace( "-", "" );
-            
+                .Replace( ",", "" );
+
             return toret;
         }
 
