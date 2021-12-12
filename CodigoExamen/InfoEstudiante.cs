@@ -55,7 +55,9 @@ namespace CodigoExamen {
                 .Replace( ":", "" )
                 .Replace( "^", "" )
                 .Replace( ".", "" )
-                .Replace( ",", "" );
+                .Replace( ",", "" )
+                .Replace( "_", "" )
+                .Replace( "-", "" );
             
             return toret;
         }
