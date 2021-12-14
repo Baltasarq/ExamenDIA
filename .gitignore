@@ -1,5 +1,6 @@
 #Autosave files
 *~
+*.bak
 
 #build
 [Oo]bj/
@@ -43,7 +44,4 @@ Thumbs.db
 notas.txt
 usr_exam_data.*
 *.zip
-
-#IDE files
-workspace.xml
 
