@@ -5,8 +5,9 @@
     <projectFile>Tests/Tests.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="">
+    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Fix: remove the &quot;exam&quot; prefix creating the zip.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodigoExamen/PersisteInfoEstudiante.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodigoExamen/PersisteInfoEstudiante.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +19,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta4/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/baltasarq/Prys/ExamenDIA/CodigoExamen/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/baltasarq/Prys/ExamenDIA/CodigoExamen/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/baltasarq/Prys/ExamenDIA/CodigoExamen/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/PersisteInfoEstudiante.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/InfoEstudiante.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta3/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta5/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
@@ -71,6 +70,8 @@
       <workItem from="1639329962586" duration="241000" />
       <workItem from="1639473427925" duration="3521000" />
       <workItem from="1639486679944" duration="81000" />
+      <workItem from="1640031114091" duration="100000" />
+      <workItem from="1640033692718" duration="5262000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: remove - and _ before creating the zip name.">
       <created>1639330186023</created>
@@ -79,7 +80,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639330186023</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fix: remove the &quot;exam&quot; prefix creating the zip.">
+      <created>1640031177478</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640031177478</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -102,6 +110,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix: remove - and _ before creating the zip name." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix: remove - and _ before creating the zip name." />
+    <MESSAGE value="Fix: remove the &quot;exam&quot; prefix creating the zip." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix: remove the &quot;exam&quot; prefix creating the zip." />
   </component>
 </project>

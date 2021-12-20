@@ -4,6 +4,8 @@
 namespace CodigoExamen {
     using System;
     using System.IO;
+    using System.Linq;
+    using System.Globalization;
     
     
     /// <summary>Persistencia mediante archivo textual.</summary>
@@ -85,29 +87,48 @@ namespace CodigoExamen {
         
         public static InfoEstudiante creaDesdeConsola()
         {
-            string dni;
-            string email;
-            string nombre;
-            string apellidos;
+            var ti = CultureInfo.CurrentCulture.TextInfo;
+            string prefijoDNI = Pide( "Letra prefijo DNI: ", minChars: 0, maxChars: 1 );
+            string dni = Pide( "DNI: ", minChars: 8, maxChars: 10, isNum: true );
+            string letraDni = Pide( "Letra DNI: ", minChars: 1, maxChars: 1 );
+            string apellidos = Pide( "Apellidos: ", minChars: 4, maxChars: 80 );
+            string nombre = Pide( "Nombre: ", minChars: 4, maxChars: 80 );
+            string email = Pide( "e.mail: ", minChars: 4, maxChars: 80 );
             
-            Console.Write( "DNI: " );
-            dni = Console.ReadLine()?.Trim().ToUpper() ?? InfoEstudiante.InvalidData;
-            
-            Console.Write( "Apellidos: " );
-            apellidos = Console.ReadLine()?.Trim() ?? InfoEstudiante.InvalidData;
-            
-            Console.Write( "Nombre: " );
-            nombre = Console.ReadLine()?.Trim() ?? InfoEstudiante.InvalidData;
-            
-            Console.Write( "e.mail: " );
-            email = Console.ReadLine()?.Trim() ?? InfoEstudiante.InvalidData;
+            if ( email.Count( ch => ch == '@' ) != 1 ) {
+                email = Pide( "e.mail: ", minChars: 4, maxChars: 80 );
+            }
 
             return new InfoEstudiante {
-                NombrePropio = nombre,
-                Apellidos = apellidos,
-                Dni = dni,
-                Email = email
+                NombrePropio = ti.ToTitleCase( nombre ),
+                Apellidos = ti.ToTitleCase( apellidos ),
+                Dni = ( prefijoDNI + dni + letraDni ).ToUpper(),
+                Email = email.ToLower()
             };
+        }
+
+        private static string Pide(
+            string msg,
+            int minChars = 8,
+            int maxChars = int.MaxValue,
+            bool isNum = false)
+        {
+            int num;
+            string? toret = null;
+
+            do {
+                if ( toret != null ) {
+                    Console.WriteLine( $"ERROR: {minChars} < longitud < {maxChars}"
+                                       + $"{( isNum ? " y deben ser dígitos" : "" )}" );
+                }
+                
+                Console.Write( msg );
+                toret = Console.ReadLine()?.Trim() ?? "";
+            } while( toret.Length < minChars
+                  || toret.Length > maxChars
+                  || ( isNum && ( !int.TryParse( toret, out num ) ) ) );
+
+            return toret;
         }
     }
 }
