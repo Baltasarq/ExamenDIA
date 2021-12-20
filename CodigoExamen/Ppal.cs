@@ -29,6 +29,7 @@ namespace CodigoExamen {
 		
 		static void Main()
 		{
+			// Recupera los datos del estudiante
 			var info = PersisteInfoEstudiante.Recupera();
 
 			if ( info is null ) {
@@ -39,6 +40,13 @@ namespace CodigoExamen {
 				persiste.CreaArchivoNotas();
 			}
 			
+			// Comprime el examen en el escritorio
+			string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.Desktop );
+            
+			ZipIt( desktopPath, info );
+			Console.WriteLine( $"Examen comprimido creado en: {desktopPath}" );
+			
+			// Ejecuta el examen
 			Console.WriteLine( "\n\n===" );
 			Console.WriteLine( info );
 			Console.WriteLine( "===" );
@@ -51,10 +59,6 @@ namespace CodigoExamen {
 
             Console.WriteLine( "\n" );
             
-            // Comprime el examen en el escritorio
-            string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.Desktop );
-            
-            ZipIt( desktopPath, info );
             Console.WriteLine( $"Examen comprimido creado en: {desktopPath}" );
 		}
 	}

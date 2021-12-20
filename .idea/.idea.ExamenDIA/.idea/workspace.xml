@@ -5,7 +5,9 @@
     <projectFile>Tests/Tests.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Fix: remove - and _ before creating the zip name." />
+    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +66,8 @@
       <option name="presentableId" value="Default" />
       <updated>1639329958175</updated>
       <workItem from="1639329962586" duration="241000" />
-      <workItem from="1639473427925" duration="2698000" />
+      <workItem from="1639473427925" duration="3521000" />
+      <workItem from="1639486679944" duration="81000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: remove - and _ before creating the zip name.">
       <created>1639330186023</created>
