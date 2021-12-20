@@ -12,7 +12,7 @@ namespace CodigoExamen {
 	class Ppal {
 		static void ZipIt(string desktopPath, InfoEstudiante info)
 		{
-			string filePath = Path.Combine( desktopPath, "examen-" + info.GetStrId() + ".zip" );
+			string filePath = Path.Combine( desktopPath, info.GetStrId() + ".zip" );
 				
 			// Eliminar el archivo si existe
 			if ( File.Exists( filePath ) ) {
