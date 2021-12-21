@@ -7,7 +7,7 @@ namespace CodigoExamen.Pregunta3 {
 	public static class Ppal {
 		public static void Prueba()
 		{
-			string NamespaceName = typeof( Ppal ).Namespace ?? "Pregunta4";
+			string NamespaceName = typeof( Ppal ).Namespace ?? "Pregunta3";
 
 			Console.WriteLine( "\n\n" + NamespaceName.Substring( NamespaceName.LastIndexOf( '.' ) + 1 ) );
 			Console.WriteLine( "=========" );
