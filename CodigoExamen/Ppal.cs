@@ -29,22 +29,26 @@ namespace CodigoExamen {
 		
 		static void Main()
 		{
+			bool corrigiendo = false;
+			
 			// Recupera los datos del estudiante
 			var info = PersisteInfoEstudiante.Recupera();
 
-			if ( info is null ) {
-				info = PersisteInfoEstudiante.creaDesdeConsola();
-				var persiste = new PersisteInfoEstudiante( info );
+			if ( !corrigiendo ) {
+				if ( info is null ) {
+					info = PersisteInfoEstudiante.creaDesdeConsola();
+					var persiste = new PersisteInfoEstudiante( info );
+					
+					persiste.Save();
+					persiste.CreaArchivoNotas();
+				}
 				
-				persiste.Save();
-				persiste.CreaArchivoNotas();
+				// Comprime el examen en el escritorio
+				string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.Desktop );
+	            
+				ZipIt( desktopPath, info );
+				Console.WriteLine( $"Examen comprimido creado en: {desktopPath}" );
 			}
-			
-			// Comprime el examen en el escritorio
-			string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.Desktop );
-            
-			ZipIt( desktopPath, info );
-			Console.WriteLine( $"Examen comprimido creado en: {desktopPath}" );
 			
 			// Ejecuta el examen
 			Console.WriteLine( "\n\n===" );
@@ -58,8 +62,6 @@ namespace CodigoExamen {
 			Pregunta5.Ppal.Prueba();
 
             Console.WriteLine( "\n" );
-            
-            Console.WriteLine( $"Examen comprimido creado en: {desktopPath}" );
 		}
 	}
 }

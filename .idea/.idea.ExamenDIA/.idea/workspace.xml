@@ -5,9 +5,7 @@
     <projectFile>Tests/Tests.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Improve: user's input is now checked.">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Improve: user's input is now checked." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,12 +15,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta4/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///home/baltasarq/Prys/ExamenDIA/CodigoExamen/PersisteInfoEstudiante.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/PersisteInfoEstudiante.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/InfoEstudiante.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta3/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/PersisteInfoEstudiante.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta5/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta4/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="22C7wnLfUnAk6VmXIT4j3fap7vK" />
   <component name="ProjectLevelVcsManager">
@@ -72,6 +69,7 @@
       <workItem from="1639486679944" duration="81000" />
       <workItem from="1640031114091" duration="100000" />
       <workItem from="1640033692718" duration="5574000" />
+      <workItem from="1640091491216" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: remove - and _ before creating the zip name.">
       <created>1639330186023</created>
