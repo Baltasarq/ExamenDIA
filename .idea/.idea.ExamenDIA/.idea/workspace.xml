@@ -5,7 +5,11 @@
     <projectFile>Tests/Tests.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Improve: user's input is now checked." />
+    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Improve: zip, data and marks created if not correcting.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodigoExamen/Pregunta1/Pregunta1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodigoExamen/Pregunta1/Pregunta1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/README.md" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -70,6 +75,8 @@
       <workItem from="1640031114091" duration="100000" />
       <workItem from="1640033692718" duration="5574000" />
       <workItem from="1640091491216" duration="32000" />
+      <workItem from="1640092667929" duration="206000" />
+      <workItem from="1640169299960" duration="386000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: remove - and _ before creating the zip name.">
       <created>1639330186023</created>
@@ -92,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640040827784</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Improve: zip, data and marks created if not correcting.">
+      <created>1640092848800</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1640092848800</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +131,7 @@
     <MESSAGE value="Fix: remove - and _ before creating the zip name." />
     <MESSAGE value="Fix: remove the &quot;exam&quot; prefix creating the zip." />
     <MESSAGE value="Improve: user's input is now checked." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve: user's input is now checked." />
+    <MESSAGE value="Improve: zip, data and marks created if not correcting." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve: zip, data and marks created if not correcting." />
   </component>
 </project>
