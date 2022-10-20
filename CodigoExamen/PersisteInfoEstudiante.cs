@@ -88,8 +88,8 @@ namespace CodigoExamen {
         public static InfoEstudiante creaDesdeConsola()
         {
             var ti = CultureInfo.CurrentCulture.TextInfo;
-            string prefijoDNI = Pide( "Letra prefijo DNI: ", minChars: 0, maxChars: 1 );
-            string dni = Pide( "DNI: ", minChars: 8, maxChars: 10, isNum: true );
+            string prefijoDNI = Pide( "Letra prefijo DNI (solo extranjeros): ", minChars: 0, maxChars: 1 );
+            string dni = Pide( "DNI (solo números): ", minChars: 8, maxChars: 10, isNum: true );
             string letraDni = Pide( "Letra DNI: ", minChars: 1, maxChars: 1 );
             string apellidos = Pide( "Apellidos: ", minChars: 4, maxChars: 80 );
             string nombre = Pide( "Nombre: ", minChars: 4, maxChars: 80 );
