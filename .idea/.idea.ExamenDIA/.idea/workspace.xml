@@ -5,10 +5,9 @@
     <projectFile>Tests/Tests.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Improve: zip, data and marks created if not correcting.">
+    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Improve: explanation tests polishing.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodigoExamen/Pregunta1/Pregunta1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodigoExamen/Pregunta1/Pregunta1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodigoExamen/Ppal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodigoExamen/Ppal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,10 +19,14 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/InfoEstudiante.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta3/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/PersisteInfoEstudiante.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta5/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta3/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta4/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/Dropbox/Prys/ExamenDIA/CodigoExamen/Pregunta5/Ppal.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="22C7wnLfUnAk6VmXIT4j3fap7vK" />
   <component name="ProjectLevelVcsManager">
@@ -33,14 +36,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/README.md" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/baltasarq/Prys/ExamenDIA/README.md&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
   <component name="RunManager">
     <configuration name="CodigoExamen" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/CodigoExamen/bin/Debug/net6.0/CodigoExamen" />
@@ -76,7 +79,9 @@
       <workItem from="1640033692718" duration="5574000" />
       <workItem from="1640091491216" duration="32000" />
       <workItem from="1640092667929" duration="206000" />
-      <workItem from="1640169299960" duration="386000" />
+      <workItem from="1640169299960" duration="1032000" />
+      <workItem from="1666256792481" duration="1626000" />
+      <workItem from="1666262111086" duration="339000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: remove - and _ before creating the zip name.">
       <created>1639330186023</created>
@@ -106,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640092848800</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Improve: explanation tests polishing.">
+      <created>1640170314205</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640170314205</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -125,13 +137,13 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix: remove - and _ before creating the zip name." />
     <MESSAGE value="Fix: remove the &quot;exam&quot; prefix creating the zip." />
     <MESSAGE value="Improve: user's input is now checked." />
     <MESSAGE value="Improve: zip, data and marks created if not correcting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve: zip, data and marks created if not correcting." />
+    <MESSAGE value="Improve: explanation tests polishing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve: explanation tests polishing." />
   </component>
 </project>
