@@ -9,7 +9,7 @@ namespace Tests {
 		[Test]
 		public void TestTest()
 		{
-			Assert.True( true );
+			Assert.Pass();
 		}
 	}
 }
