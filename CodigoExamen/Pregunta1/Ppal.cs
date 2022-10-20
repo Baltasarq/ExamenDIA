@@ -15,4 +15,3 @@ namespace CodigoExamen.Pregunta1 {
 		}
 	}
 }
-
