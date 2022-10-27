@@ -1,13 +1,11 @@
-﻿// ExamenDIA (c) 2021 Baltasar MIT License <jbgarcia@uvigo.es>
+﻿// ExamenDIA (c) 2021 Baltasar MIT License <baltasarq@uvigo.es>
 
-
-using System.Diagnostics;
-using System.Globalization;
 
 namespace CodigoExamen {
 	using System;
 	using System.IO;
 	using System.Text;
+	using System.Globalization;
 	using System.IO.Compression;
 
 
@@ -72,10 +70,34 @@ namespace CodigoExamen {
 
 		private static string DetermineSrcDir()
 		{
+			const string NombreSolucion = "examendia";
 			string toret = Directory.GetCurrentDirectory();
 
-			Debug.Assert( toret.EndsWith( "ExamenDia", true,
-						  CultureInfo.CurrentCulture ) );
+			if ( !toret.EndsWith( NombreSolucion, 
+				    true,
+				    CultureInfo.CurrentCulture ) )
+			{
+				string dirCorrecto = NombreSolucion + "/";
+				int posNombreSolucion = toret.IndexOf(
+											NombreSolucion,
+											StringComparison.InvariantCultureIgnoreCase );
+				
+				if ( posNombreSolucion >= 0 ) {
+					posNombreSolucion += NombreSolucion.Length;
+					dirCorrecto = toret.Substring( 0, posNombreSolucion );
+				}
+				
+				throw new ApplicationException(
+					"Dir de ejecución incorrecto."
+							+ "\nEl proyecto no se está ejecutando "
+							+ "en el directorio de la solución"
+							+ "\nPor favor, revise la cfg. de ejecución "
+							+ "del proyecto de manera que el "
+							+ "directorio de trabajo ('Working Directory'), "
+							+ "\napunte al directorio de la solución: ExamenDIA/"
+							+ "\nWorking directory: " + toret
+							+ "\nDebería ser: " + dirCorrecto );
+			}
 			
 			return toret;
 		}
