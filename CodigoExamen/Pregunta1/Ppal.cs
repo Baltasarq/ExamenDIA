@@ -1,4 +1,4 @@
-﻿// ExamenDIA (c) 2021 Baltasar MIT License <jbgarcia@uvigo.es>
+﻿// ExamenDIA (c) 2021 Baltasar MIT License <baltasarq@uvigo.es>
 
 
 namespace CodigoExamen.Pregunta1 {
