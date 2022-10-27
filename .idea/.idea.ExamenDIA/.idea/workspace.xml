@@ -8,6 +8,7 @@
     <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Improve: explanation tests polishing.">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodigoExamen/Ppal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodigoExamen/Ppal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +82,8 @@
       <workItem from="1640092667929" duration="206000" />
       <workItem from="1640169299960" duration="1032000" />
       <workItem from="1666256792481" duration="1626000" />
-      <workItem from="1666262111086" duration="339000" />
+      <workItem from="1666262111086" duration="630000" />
+      <workItem from="1666862532920" duration="1606000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: remove - and _ before creating the zip name.">
       <created>1639330186023</created>
