@@ -70,23 +70,10 @@ namespace CodigoExamen {
 
 		private static string DetermineSrcDir()
 		{
-			const string NombreSolucion = "examendia";
-			string toret = Directory.GetCurrentDirectory();
+			const string NombreArchivoSolucion = "ExamenDIA.sln";
+			string toret = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar;
 
-			if ( !toret.EndsWith( NombreSolucion, 
-				    true,
-				    CultureInfo.CurrentCulture ) )
-			{
-				string dirCorrecto = NombreSolucion + "/";
-				int posNombreSolucion = toret.IndexOf(
-											NombreSolucion,
-											StringComparison.InvariantCultureIgnoreCase );
-				
-				if ( posNombreSolucion >= 0 ) {
-					posNombreSolucion += NombreSolucion.Length;
-					dirCorrecto = toret.Substring( 0, posNombreSolucion );
-				}
-				
+			if ( !File.Exists( toret + NombreArchivoSolucion ) ) {
 				throw new ApplicationException(
 					"Dir de ejecución incorrecto."
 							+ "\nEl proyecto no se está ejecutando "
@@ -94,9 +81,8 @@ namespace CodigoExamen {
 							+ "\nPor favor, revise la cfg. de ejecución "
 							+ "del proyecto de manera que el "
 							+ "directorio de trabajo ('Working Directory'), "
-							+ "\napunte al directorio de la solución: ExamenDIA/"
-							+ "\nWorking directory: " + toret
-							+ "\nDebería ser: " + dirCorrecto );
+							+ "\napunte al directorio de la solución con: " + NombreArchivoSolucion
+							+ "\nWorking directory: " + toret );
 			}
 			
 			return toret;

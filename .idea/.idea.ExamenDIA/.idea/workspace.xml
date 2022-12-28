@@ -5,10 +5,9 @@
     <projectFile>Tests/Tests.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Improve: explanation tests polishing.">
+    <list default="true" id="5a028706-8289-4638-a14e-33aeeb10c3cd" name="Changes" comment="Checks the working directory on runtime">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ExamenDIA/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodigoExamen/Ppal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CodigoExamen/Ppal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +28,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectId" id="22C7wnLfUnAk6VmXIT4j3fap7vK" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -37,14 +37,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/baltasarq/Prys/ExamenDIA/README.md&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/baltasarq/Prys/ExamenDIA/README.md",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/home/baltasarq/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
+      "/home/baltasarq/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache",
+      "/home/baltasarq/.local/share/Symbols/src"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="CodigoExamen" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/CodigoExamen/bin/Debug/net6.0/CodigoExamen" />
@@ -83,7 +91,8 @@
       <workItem from="1640169299960" duration="1032000" />
       <workItem from="1666256792481" duration="1626000" />
       <workItem from="1666262111086" duration="630000" />
-      <workItem from="1666862532920" duration="1606000" />
+      <workItem from="1666862532920" duration="2489000" />
+      <workItem from="1672257628877" duration="392000" />
     </task>
     <task id="LOCAL-00001" summary="Fix: remove - and _ before creating the zip name.">
       <created>1639330186023</created>
@@ -120,7 +129,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640170314205</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ensures README is shown in start up.">
+      <created>1666864929665</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666864929665</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Checks the working directory on runtime">
+      <created>1666864955416</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1666864955416</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,6 +169,8 @@
     <MESSAGE value="Improve: user's input is now checked." />
     <MESSAGE value="Improve: zip, data and marks created if not correcting." />
     <MESSAGE value="Improve: explanation tests polishing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Improve: explanation tests polishing." />
+    <MESSAGE value="Ensures README is shown in start up." />
+    <MESSAGE value="Checks the working directory on runtime" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checks the working directory on runtime" />
   </component>
 </project>
