@@ -10,6 +10,7 @@ TestResults/
 
 # globs
 Makefile.in
+workspace.xml
 *.DS_Store
 *.sln.cache
 *.suo
