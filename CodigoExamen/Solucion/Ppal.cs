@@ -16,14 +16,9 @@ public static class Ppal {
 		Console.WriteLine( @"
 			Esta es la plantilla para tu examen de DIA.
 
-			Debe funcionar tanto en Rider como en Visual Studio.
-			Si tienes que compartir fuentes entre preguntas
-			(p.ej., porque se pide ampliar una clase ya creada),
-			puedes hacerlo en la misma pregunta,
-			utilizando using y partial (si es necesario), o
-			incluso copiar la clase de la pregunta anterior
-			en la nueva.
-
+			Funcionará tanto en Rider como en Visual Studio.
+			Creará un archivo ZIP en el escritorio con el código fuente.
+			¡Para que funcione tiene que compilarse y ejecutarse el proyecto!
 			Tienes creado aparte un proyecto para tests.
 
 			Buena suerte,
