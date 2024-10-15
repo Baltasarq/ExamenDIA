@@ -1,8 +1,11 @@
-#Autosave files
+# autobackup files
 *~
 *.bak
 
-#build
+# Rider
+.idea/
+
+# build
 [Oo]bj/
 [Bb]in/
 packages/
@@ -30,18 +33,18 @@ tarballs/
 test-results/
 Thumbs.db
 
-#Mac bundle stuff
+# Mac bundle stuff
 *.dmg
 *.app
 
-#resharper
+# resharper
 *_Resharper.*
 *.Resharper
 
-#dotCover
+# dotCover
 *.dotCover
 
-#Own files
+# own files
 notas.txt
 usr_exam_data.*
 *.zip
