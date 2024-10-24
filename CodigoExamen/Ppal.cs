@@ -48,7 +48,7 @@ class Ppal {
 			// Comprime el examen en el escritorio
 			string srcPath = DetermineSlnDir(); 
 			string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.Desktop );
-            
+
 			ZipIt( srcPath, desktopPath, info );
 			Console.WriteLine( $"Trabajando desde: {srcPath}" );
 			Console.WriteLine( $"Examen comprimido creado en: {desktopPath}" );
