@@ -46,10 +46,10 @@ namespace CodigoExamen {
                 f.WriteLine( "===\n");
 
                 for (int i = 0; i < NumPreguntas; ++i) {
-                    f.WriteLine( $"Pregunta {i + 1}:    " );
+                    f.WriteLine( $"Pregunta {i + 1}: 0   " );
                 }
 				
-                f.WriteLine( "\nNota:          " );
+                f.WriteLine( "\nNota:       0" );
             }
 
             return;
