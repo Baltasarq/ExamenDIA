@@ -1,0 +1,17 @@
+{
+  "name": "Examen DIA con .NET",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:10.0",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csdevkit",
+        "ms-dotnettools.csharp"
+      ]
+    }
+  },
+  "forwardPorts": [5000, 5001],
+  "mounts": [
+    "source=dotnet10-nuget,target=/home/vscode/.nuget/packages,type=volume"
+  ],
+  "postCreateCommand": "dotnet restore || true"
+}
