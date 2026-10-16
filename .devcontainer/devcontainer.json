@@ -10,8 +10,5 @@
     }
   },
   "forwardPorts": [5000, 5001],
-  "mounts": [
-    "source=dotnet10-nuget,target=${localEnv:HOME}/.nuget/packages,type=volume"
-  ],
   "postCreateCommand": "dotnet restore || true"
 }
