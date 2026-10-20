@@ -3,27 +3,27 @@
 
 namespace CodigoExamen {
     using System.Linq;
-    
+
     /// <summary>Guarda la info del estudiante: dni, nombre, email.</summary>
-	public class InfoEstudiante {
+	public class StudentInfo {
         public const string InvalidData = "n/a";
 
-        public InfoEstudiante()
+        public StudentInfo()
         {
-            this.NombrePropio =
-                this.Apellidos =
+            this.FirstName =
+                this.Surname =
                     this.Dni =
                         this.Email = InvalidData;
         }
 
         /// <summary>Nombre completo del alumno.</summary>
-		public string Nombre => this.Apellidos + ", " + this.NombrePropio;
+		public string CompleteName => this.Surname + ", " + this.FirstName;
 
-        public string Apellidos {
+        public string Surname {
             get; init;
         }
-        
-        public string NombrePropio {
+
+        public string FirstName {
             get; init;
         }
 
@@ -37,15 +37,15 @@ namespace CodigoExamen {
 
         public string GetStrId()
         {
-            string apellidos = this.Apellidos
+            string surname = this.Surname
                 .Replace( "_", "" )
                 .Replace( "-", "" );
-            
-            string toret = $"{apellidos}_{this.NombrePropio}-{this.Dni}";
-            
+
+            string toret = $"{surname}_{this.FirstName}-{this.Dni}";
+
             // Convierte a ASCII
             toret = string.Join( "", toret.ToCharArray().Where( x => x < 127 ) );
-            
+
             // Eliminar caracteres ilegales
             toret = toret.Trim().ToLower()
                 .Replace( " ", "" )
@@ -69,9 +69,9 @@ namespace CodigoExamen {
         public override bool Equals(object? obj)
         {
             bool toret = false;
-            
-            if ( obj is InfoEstudiante info ) {
-                toret = this.Dni == info.Dni;
+
+            if ( obj is StudentInfo info ) {
+                toret = ( this.Dni == info.Dni );
             }
 
             return toret;
@@ -79,8 +79,8 @@ namespace CodigoExamen {
 
         public override string ToString()
         {
-            return $"Nombre: {this.Nombre}"
-                   + $"\nEmail: {this.Email}" 
+            return $"Nombre: {this.CompleteName}"
+                   + $"\nEmail: {this.Email}"
                    + $"\nDNI: {this.Dni}";
         }
     }

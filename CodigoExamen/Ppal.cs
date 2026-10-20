@@ -10,15 +10,15 @@ using System.IO.Compression;
 
 
 class Ppal {
-	static void ZipIt(string srcPath, string desktopPath, InfoEstudiante info)
+	static void ZipIt(string srcPath, string desktopPath, StudentInfo info)
 	{
 		string filePath = Path.Combine( desktopPath, info.GetStrId() + ".zip" );
-			
+
 		// Eliminar el archivo si existe
 		if ( File.Exists( filePath ) ) {
 			File.Delete( filePath );
 		}
-		
+
 		ZipFile.CreateFromDirectory(
 			sourceDirectoryName: srcPath,
 			destinationArchiveFileName: filePath,
@@ -26,34 +26,33 @@ class Ppal {
 			includeBaseDirectory: true,
 			entryNameEncoding: Encoding.UTF8 );
 	}
-	
+
 	static void Main()
 	{
 		bool corrigiendo = false;
-		
+
 		Console.WriteLine( "# Examen DIA\n");
-		
-		// Recupera los datos del estudiante
-		var info = PersisteInfoEstudiante.Recupera();
+
+		var info = PersistStudentInfo.Retrieve();
 
 		if ( !corrigiendo ) {
 			if ( info is null ) {
-				info = PersisteInfoEstudiante.creaDesdeConsola();
-				var persiste = new PersisteInfoEstudiante( info );
-				
+				info = PersistStudentInfo.StudentInfoFromConsole();
+				var persiste = new PersistStudentInfo( info );
+
 				persiste.Save();
-				persiste.CreaArchivoNotas();
+				persiste.CreateMarksFile();
 			}
-			
+
 			// Comprime el examen en el escritorio
-			string srcPath = DetermineSlnDir(); 
+			string srcPath = DetermineSlnDir();
 			string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.Desktop );
 
 			ZipIt( srcPath, desktopPath, info );
 			Console.WriteLine( $"Trabajando desde: {srcPath}" );
 			Console.WriteLine( $"Examen comprimido creado en: {desktopPath}" );
 		}
-		
+
 		// Ejecuta el examen
 		Console.WriteLine( "\n\n===" );
 		Console.WriteLine( info );
@@ -77,11 +76,11 @@ class Ppal {
 	private static string DetermineSlnDir()
 	{
 		string toret = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar;
-		const string nombreArchivoSolucion = "ExamenDIA.sln";
-		
+		const string nombreArchivoSolucion = "ExamenDIA.slnx";
+
 		while( !ExistsSolutionIn( toret ) ) {
 			DirectoryInfo? parentDir = Directory.GetParent( toret );
-			
+
 			if ( parentDir is not null ) {
 				toret = parentDir.FullName;
 			} else {
@@ -97,7 +96,7 @@ class Ppal {
 					+ "\nWorking directory: " + toret );
 			}
 		}
-		
+
 		return toret;
 	}
 }
