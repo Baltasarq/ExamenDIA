@@ -3,28 +3,16 @@
 
 namespace CodigoExamen;
 
+
 using System;
 using System.IO;
-using System.Text;
-using System.IO.Compression;
 
 
-class Ppal {
-	static void ZipIt(string srcPath, string desktopPath, StudentInfo info)
+static class Ppal {
+	static void ZipIt(string srcPath, string destPath, StudentInfo info)
 	{
-		string filePath = Path.Combine( desktopPath, info.GetStrId() + ".zip" );
-
-		// Eliminar el archivo si existe
-		if ( File.Exists( filePath ) ) {
-			File.Delete( filePath );
-		}
-
-		ZipFile.CreateFromDirectory(
-			sourceDirectoryName: srcPath,
-			destinationArchiveFileName: filePath,
-			compressionLevel: CompressionLevel.Fastest,
-			includeBaseDirectory: true,
-			entryNameEncoding: Encoding.UTF8 );
+		string destFilePath = Path.Combine( destPath, info.GetStrId() + ".zip" );
+		Zipper.ZipDir( srcPath, destFilePath );
 	}
 
 	static void Main()
@@ -38,19 +26,17 @@ class Ppal {
 		if ( !corrigiendo ) {
 			if ( info is null ) {
 				info = PersistStudentInfo.StudentInfoFromConsole();
-				var persiste = new PersistStudentInfo( info );
+				var persist = new PersistStudentInfo( info );
 
-				persiste.Save();
-				persiste.CreateMarksFile();
+				persist.Save();
+				persist.CreateMarksFile();
 			}
 
 			// Comprime el examen en el escritorio
 			string srcPath = DetermineSlnDir();
-			string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.Desktop );
+			string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.UserProfile );
 
 			ZipIt( srcPath, desktopPath, info );
-			Console.WriteLine( $"Trabajando desde: {srcPath}" );
-			Console.WriteLine( $"Examen comprimido creado en: {desktopPath}" );
 		}
 
 		// Ejecuta el examen
@@ -63,38 +49,15 @@ class Ppal {
 		Console.WriteLine( "\n" );
 	}
 
-	private static bool ExistsSolutionIn(string dir)
-	{
-		const string ext = ".sln";
-		var files = Directory.EnumerateFiles(
-								dir,
-								"*" + ext,
-								SearchOption.TopDirectoryOnly );
-		return files.Any();
-	}
-
 	private static string DetermineSlnDir()
 	{
-		string toret = Directory.GetCurrentDirectory() + Path.DirectorySeparatorChar;
-		const string nombreArchivoSolucion = "ExamenDIA.slnx";
+		const string SolutionName = "examendia";
+		string toret = Directory.GetCurrentDirectory();
+		int pos = toret.ToLower().LastIndexOf( SolutionName );
 
-		while( !ExistsSolutionIn( toret ) ) {
-			DirectoryInfo? parentDir = Directory.GetParent( toret );
-
-			if ( parentDir is not null ) {
-				toret = parentDir.FullName;
-			} else {
-				throw new ApplicationException(
-					"Dir de ejecución incorrecto."
-					+ "\nEl proyecto no se está ejecutando "
-					+ "en el directorio de la solución"
-					+ "\nPor favor, revise la cfg. de ejecución "
-					+ "del proyecto de manera que el "
-					+ "directorio de trabajo ('Working Directory'), "
-					+ "\napunte al directorio de la solución con: "
-					+ nombreArchivoSolucion
-					+ "\nWorking directory: " + toret );
-			}
+		if ( pos >= 0 ) {
+			pos += SolutionName.Length;
+			toret = toret.Substring( 0, pos );
 		}
 
 		return toret;

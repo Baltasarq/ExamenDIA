@@ -2,7 +2,7 @@
 
 
 namespace CodigoExamen.Solucion;
-    
+
 using System;
 
 
