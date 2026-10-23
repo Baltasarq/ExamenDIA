@@ -26,3 +26,16 @@ Al comenzar cada ejecución, se crea un nuevo archivo zip *apellidos_nombre-dni.
 
 1. En caso de haber errores de compilación en el código, pues solo se genera cuando se ejecuta el proyecto.
 2. En caso de que la ejecución no llegue a iniciarse (falle justo al comenzar).
+
+## Entrega
+
+Para obtener el archivo _zip_ desde el contenedor, se puede utilizar **Docker Desktop**, y acceder a _Files_ en el menú de la imagen. Pulsando el botón derecho sobre el Zip, se puede descargar con `Save`.
+
+En otro caso, se puede obtener el nombre de la imagen que se está utilizando con `ps`, y utilizar `cp` para copiar el archivo. Este comando no soporta _wildcards_.
+
+    $ docker ps
+    Imagen    Tamaño    Id     Nombre
+    Ubuntu    4Gb       A0...  silversurfer
+
+    $ docker cp silversurfer:/home/vscode/lpez_sper-12345678D.zip ~/Desktop
+    Ok
