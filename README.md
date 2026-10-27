@@ -4,7 +4,9 @@ Esta plantilla permite, teniendo instalado **Visual Studio Code** y **Docker**, 
 
 ## Instalación
 
-1. Abre Visual Studio Code, y en la parte de control de versiones, pulsa en Clonar repositorio. Introduce `http://github.code/baltasarq/ExamenDIA`.
+0. Abre Docker Desktop, y minimízalo. Abre Visual Studio Code, e instala la extensión "Dev Containers" (Microsoft), si no está instalada.
+
+1. En la parte de control de versiones, a la izquierda, pulsa en Clonar repositorio. Introduce `http://github.code/baltasarq/ExamenDIA`.
 
 2. Tras clonar el repositorio, el editor preguntará si debe abrirlo. Pulsamos en `Abrir` u `Open`.
 
@@ -29,13 +31,18 @@ Al comenzar cada ejecución, se crea un nuevo archivo zip *apellidos_nombre-dni.
 
 ## Entrega
 
-Para obtener el archivo _zip_ desde el contenedor, se puede utilizar **Docker Desktop**, y acceder a _Files_ en el menú de la imagen. Pulsando el botón derecho sobre el Zip, se puede descargar con `Save`.
+Para obtener el archivo _zip_ desde el contenedor, se puede utilizar **Docker Desktop**, y acceder a _Files_ en el menú del contenedor. Pulsando el botón derecho sobre el Zip, se puede descargar con `Save`.
 
-En otro caso, se puede obtener el nombre de la imagen que se está utilizando con `ps`, y utilizar `cp` para copiar el archivo. Este comando no soporta _wildcards_.
+En otro caso, se puede obtener el nombre del contenedor que se está utilizando con `ps`, y utilizar `cp` para copiar el archivo. Este comando no soporta _wildcards_.
 
     $ docker ps
     Imagen    Tamaño    Id     Nombre
     Ubuntu    4Gb       A0...  silversurfer
 
-    $ docker cp silversurfer:/home/vscode/lpez_sper-12345678D.zip ~/Desktop
+El nombre _silversurfer_ es inventado para este ejemplo, por eso es necesario comprobar cuál es el nombre concreto del contenedor. Más abajo, _path/to/dir_, puede ser, por ejemplo, en Linux: `~/Desktop`, mientras en Windows podría ser (cambia _user_ por tu nombre de usuario): `c:\users\usr\Escritorio`.
+
+    $ docker silversurfer exec ls /home/vscode
+    lpez_sper-12345678D.zip
+
+    $ docker cp silversurfer:/home/vscode/lpez_sper-12345678D.zip path/to/dir
     Ok
