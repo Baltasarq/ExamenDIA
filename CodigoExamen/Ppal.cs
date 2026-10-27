@@ -51,13 +51,31 @@ static class Ppal {
 
 	private static string DetermineSlnDir()
 	{
-		const string SolutionName = "examendia";
+		IList<string> solutionNames = [ "examendia-master", "examendia" ];
 		string toret = Directory.GetCurrentDirectory();
-		int pos = toret.ToLower().LastIndexOf( SolutionName );
+
+		foreach(string solutionName in solutionNames) {
+			var solutionPath = DetermineSlnDir( solutionName );
+
+			if ( !string.IsNullOrEmpty( solutionPath )) {
+				toret = solutionPath;
+				break;
+			}
+		}
+
+		return toret;
+	}
+
+	private static string DetermineSlnDir(string dirName)
+	{
+		string toret = Directory.GetCurrentDirectory();
+		int pos = toret.ToLower().LastIndexOf( dirName );
 
 		if ( pos >= 0 ) {
-			pos += SolutionName.Length;
+			pos += dirName.Length;
 			toret = toret.Substring( 0, pos );
+		} else {
+			toret = "";
 		}
 
 		return toret;
