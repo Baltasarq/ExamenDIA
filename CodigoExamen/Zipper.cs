@@ -15,6 +15,8 @@ public static class Zipper {
         string tempDir = Path.Combine( Path.GetTempPath(), tempDirId );
 
         try {
+            File.Delete( destFilePath );
+
             var files = Directory.GetFiles(
                                     orgPath,
                                     "*.cs",
@@ -35,7 +37,7 @@ public static class Zipper {
                         compressionLevel: CompressionLevel.Fastest,
                         includeBaseDirectory: true,
                         entryNameEncoding: Encoding.UTF8 );
-        } catch(IOException) {
+        } catch(SystemException) {
             ZipFile.CreateFromDirectory(
                 sourceDirectoryName: orgPath,
                 destinationArchiveFileName: destFilePath,
