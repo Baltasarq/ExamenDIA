@@ -34,9 +34,9 @@ static class Ppal {
 
 			// Comprime el examen en el escritorio
 			string srcPath = DetermineSlnDir();
-			string desktopPath = Environment.GetFolderPath( Environment.SpecialFolder.UserProfile );
+			string homePath = Environment.GetFolderPath( Environment.SpecialFolder.UserProfile );
 
-			ZipIt( srcPath, desktopPath, info );
+			ZipIt( srcPath, homePath, info );
 		}
 
 		// Ejecuta el examen
