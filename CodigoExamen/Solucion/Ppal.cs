@@ -16,7 +16,7 @@ public static class Ppal {
 		Console.WriteLine( @"
 			Esta es la plantilla para tu examen de DIA.
 
-			Funcionará tanto en Rider como en Visual Studio.
+			Funcionará directamente, o en un contenedor, en VS Code.
 			Creará un archivo ZIP en el escritorio con el código fuente.
 			¡Para que funcione tiene que compilarse y ejecutarse el proyecto!
 			Tienes creado aparte un proyecto para tests.
